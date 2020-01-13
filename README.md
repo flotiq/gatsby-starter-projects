@@ -5,13 +5,6 @@
   </a>
 </p>
 
-<h1 align="center">
-  London by <a href="https://jamstack.studio">Jamstack Studio</a>
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-blog)
-
-</h1>
-
 ---
 
 A custom, image-centric theme for Gatsby. Made for publishers and portfolios with plenty of graphics to show off to the world. Completely free and fully responsive, released under the MIT license.
@@ -43,7 +36,7 @@ _First time with Gatsby? Take a look on the [official and community-created star
 
     ```sh
     # create a new Gatsby site using the blog starter
-    npx gatsby new my-awesome-portfolio https://github.com/ImedAdel/gatsby-london
+    npx gatsby new my-awesome-portfolio https://github.com/flotiq/gatsby-starter-projects
     ```
 
 1.  **Start developing.**
@@ -63,4 +56,16 @@ _First time with Gatsby? Take a look on the [official and community-created star
 
     Open the `my-blog-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
+
+## 🎓 Learning Gatsby
+
+Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+
+- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+
+- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+
+## 💫 Deploy
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/flotiq/gatsby-starter-projects)
 <!-- AUTO-GENERATED-CONTENT:END -->

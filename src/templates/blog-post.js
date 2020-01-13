@@ -1,53 +1,36 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
+      console.log(this.props.data);
+    const post = this.props.data.flotiqProject
     const siteTitle = this.props.data.site.siteMetadata.title
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.description || post.excerpt}
+          title={post.name}
         />
         <article
-          className={`post-content ${post.frontmatter.thumbnail || `no-image`}`}
+          className={`post-content ${post.gallery[0] || `no-image`}`}
         >
           <header className="post-content-header">
-            <h1 className="post-content-title">{post.frontmatter.title}</h1>
+            <h1 className="post-content-title">{post.name}</h1>
           </header>
 
-          {post.frontmatter.description && (
-            <p class="post-content-excerpt">{post.frontmatter.description}</p>
+          {post.description && (
+            <div className="post-content-body" dangerouslySetInnerHTML={{ __html: post.description }} />
           )}
 
-          {post.frontmatter.thumbnail && (
+          {post.gallery && post.gallery.map((image) =>
             <div className="post-content-image">
-              <Img
-                className="kg-image"
-                fluid={post.frontmatter.thumbnail.childImageSharp.fluid}
-                alt={post.frontmatter.title}
-              />
+              <img src={`${process.env.GATSBY_FLOTIQ_BASE_URL}/image/1920x0/${image.id}.${image.extension}`} alt={post.name}/>
             </div>
           )}
-
-          <div
-            className="post-content-body"
-            dangerouslySetInnerHTML={{ __html: post.html }}
-          />
-
-          <footer className="post-content-footer">
-            {/* There are two options for how we display the byline/author-info.
-        If the post has more than one author, we load a specific template
-        from includes/byline-multiple.hbs, otherwise, we just use the
-        default byline. */}
-          </footer>
         </article>
       </Layout>
     )
@@ -64,22 +47,15 @@ export const pageQuery = graphql`
         author
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      excerpt(pruneLength: 160)
-      html
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
+    flotiqProject(slug: {eq: $slug}) {
         description
-        thumbnail {
-          childImageSharp {
-            fluid(maxWidth: 1360) {
-              ...GatsbyImageSharpFluid
-            }
-          }
+        gallery {
+          extension
+          id
         }
+        id
+        name
+        slug
       }
-    }
   }
 `

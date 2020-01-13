@@ -11,7 +11,7 @@ import "../utils/css/screen.css"
 //TODO: switch to staticQuery, get rid of comments, remove unnecessary components, export as draft template
 const BlogIndex = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges
+  const posts = data.allFlotiqProject.edges
   let postCounter = 0
 
   return (
@@ -33,7 +33,7 @@ const BlogIndex = ({ data }, location) => {
           postCounter++
           return (
             <PostCard
-              key={node.fields.slug}
+              key={node.slug}
               count={postCounter}
               node={node}
               postClass={`post`}
@@ -53,27 +53,19 @@ const indexQuery = graphql`
         description
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allFlotiqProject(sort: {fields: flotiqInternal___createdAt, order: DESC}) {
       edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-            thumbnail {
-              childImageSharp {
-                fluid(maxWidth: 1360) {
-                  ...GatsbyImageSharpFluid
-                }
+            node {
+              id
+              gallery {
+                extension
+                id
               }
+              description
+              name
+              slug
             }
           }
-        }
-      }
     }
   }
 `

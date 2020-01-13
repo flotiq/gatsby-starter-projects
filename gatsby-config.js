@@ -1,5 +1,6 @@
 const urljoin = require("url-join")
 const siteConfig = require("./siteConfig")
+require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
@@ -12,6 +13,13 @@ module.exports = {
     },
   },
   plugins: [
+    {
+      "resolve": "gatsby-source-flotiq",
+      "options": {
+        "baseUrl": process.env.GATSBY_FLOTIQ_BASE_URL,
+        "authToken": process.env.FLOTIQ_API_KEY
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -7,8 +7,8 @@ import SEO from "../components/seo"
 class BlogPostTemplate extends React.Component {
   render() {
       console.log(this.props.data);
-    const post = this.props.data.flotiqProject
-    const siteTitle = this.props.data.site.siteMetadata.title
+    const post = this.props.data.project;
+    const siteTitle = this.props.data.site.siteMetadata.title;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -47,7 +47,7 @@ export const pageQuery = graphql`
         author
       }
     }
-    flotiqProject(slug: {eq: $slug}) {
+    project(slug: {eq: $slug}) {
         description
         gallery {
           extension
@@ -58,4 +58,4 @@ export const pageQuery = graphql`
         slug
       }
   }
-`
+`;

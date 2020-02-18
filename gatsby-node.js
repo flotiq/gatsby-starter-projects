@@ -1,13 +1,13 @@
-const path = require(`path`)
+const path = require(`path`);
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const blogPost = path.resolve(`./src/templates/blog-post.js`);
   return graphql(
     `
       {
-        allFlotiqProject {
+        allProject {
           edges {
             node {
               id
@@ -29,11 +29,11 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     // Create blog posts pages.
-    const posts = result.data.allFlotiqProject.edges
+    const posts = result.data.allProject.edges;
 
     posts.forEach((post, index) => {
-      const previous = index === posts.length - 1 ? null : posts[index + 1].node
-      const next = index === 0 ? null : posts[index - 1].node
+      const previous = index === posts.length - 1 ? null : posts[index + 1].node;
+      const next = index === 0 ? null : posts[index - 1].node;
 
       createPage({
         path: post.node.slug,
@@ -44,8 +44,8 @@ exports.createPages = ({ graphql, actions }) => {
           next,
         },
       })
-    })
+    });
 
     return null
   })
-}
+};

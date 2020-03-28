@@ -30,23 +30,31 @@ _First time with Gatsby? Take a look on the [official and community-created star
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+If you never used Gatsby before, I highly recommend you to [set up your development environment](https://www.gatsbyjs.org/tutorial/part-zero/)!
 
-    Use `npx` and the Gatsby CLI to create a new project
+To copy and install this starter run this command:
 
-    ```sh
-    # create a new Gatsby site using the blog starter
-    npx gatsby new my-awesome-portfolio https://github.com/flotiq/gatsby-starter-projects
-    ```
+```bash
+$ gatsby new project-portfolio https://github.com/flotiq/gatsby-starter-projects
+```
 
-1.  **Start developing.**
+The main data source of this starter is a Projects Content Type in [Flotiq.com](https://flotiq.com), after you [register](https://editor.flotiq.com/register.html), you can choose `Project` when you create your first Content Type Definition (all you need to do is follow the tutorial on Flotiq Dashboard).
 
-    Navigate into your new site’s directory and start it up.
+Next - add some projects in Flotiq! Hint: you can use the integrated Unsplash media library to pull some awesome pictures.
 
-    ```sh
-    cd my-awesome-portfolio/
-    gatsby develop
-    ```
+The last step is to configure the application to know from where it has to fetch the data, this is going to be made by using `environment variables`. You need to create a file called `.env` inside the root directory of the project, with the following structure:
+
+```js
+GATSBY_FLOTIQ_BASE_URL=https://api.flotiq.com
+FLOTIQ_API_KEY=YOUR API KEY
+```
+
+To get YOUR API KEY check out [documentation](https://flotiq.com/docs/API/).
+
+After this you can start development:
+```
+gatsby develop
+```
 
 1.  **Open the source code and start editing!**
 

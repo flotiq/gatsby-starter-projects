@@ -51,6 +51,16 @@ FLOTIQ_API_KEY=YOUR API KEY
 
 To get YOUR API KEY check out [documentation](https://flotiq.com/docs/API/).
 
+ If you wish to import example projects to your account, run:
+          
+  ```sh
+  node ./example/importExample.js
+  ```
+  
+  It will add 9 images and 3 projects to your Flotiq account.
+  
+  _Note: You need to put your Read and write API key in `.env` for import to work. You don't need Project content type in your account. If you already have projects with ids `project-1`, `projects-2`, and `project-3` they will be overwritten._
+
 After this you can start development:
 ```
 gatsby develop

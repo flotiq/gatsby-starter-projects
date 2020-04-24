@@ -7,7 +7,7 @@ Gatsby Starter - Projects portfolio
 
 This is a [Gatsby](https://gatsbyjs.org) starter project for a blog. It's configured to pull projects data from [Flotiq](https://flotiq.com) and can be easily deployed to your cloud hosting - Heroku, Netlify, Gatsby Cloud, etc.
 
-Live Demo: https://flotiq-blog.herokuapp.com/
+Live Demo: https://flotiq-starter-for-projects.herokuapp.com/
 
 Screenshot
 

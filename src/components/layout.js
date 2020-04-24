@@ -79,6 +79,14 @@ const Layout = props => {
         >
           Gatsby
         </a>
+        {" & "}
+        <a
+            href="https://flotiq.com"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+          Flotiq
+        </a>
       </footer>
     </div>
   )

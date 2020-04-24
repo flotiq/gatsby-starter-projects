@@ -1,79 +1,82 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://gatsby-london.netlify.com">
-    <img alt="Gatsby" src="./content/assets/screenshot-desktop.jpg" />
-  </a>
-</p>
+<a href="https://flotiq.com/">
+    <img src="https://editor.flotiq.com/fonts/fq-logo.svg" alt="Flotiq logo" title="Flotiq" align="right" height="60" />
+</a>
 
----
+Gatsby Starter - Projects portfolio
+========================
 
-A custom, image-centric theme for Gatsby. Made for publishers and portfolios with plenty of graphics to show off to the world. Completely free and fully responsive, released under the MIT license.
+This is a [Gatsby](https://gatsbyjs.org) starter project for a blog. It's configured to pull projects data from [Flotiq](https://flotiq.com) and can be easily deployed to your cloud hosting - Heroku, Netlify, Gatsby Cloud, etc.
 
-**Based on [London](https://github.com/TryGhost/London) for Ghost**
+Live Demo: https://flotiq-blog.herokuapp.com/
 
-**Demo: https://gatsby-london.netlify.com**
+Screenshot
 
----
-<p align="center">
-  <a href="https://jamstack.studio">
-    <img alt="Jamstack Studio" src="https://raw.githubusercontent.com/ImedAdel/media/master/jamstack.studio_(Laptop%20with%20HiDPI%20screen).png" />
-  </a>
-</p>
+<img src="https://github.com/flotiq/gatsby-starter-projects/raw/master/docs/flotiq-starter-projects.png" width=480 />
 
----
+## Quick start
 
-_I haven't really spent any time adding the JS animations or removing any unused CSS (automatically done by PurgeCSS). You will also need HTML in your Markdown file in order to add CSS classes to your images_
+1. **Start project from template using Gatsby CLI**
+    
+    ```bash
+    gatsby gatsby-starter-projects https://github.com/flotiq/gatsby-starter-projects
+    ```
+   
+1. **Setup "Project" Content Type in Flotiq**
 
----
+   Create your [Flotiq.com](https://flotiq.com) account. Next, create the `Project` Content Type:
 
-_First time with Gatsby? Take a look on the [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+   ![Blog Post content type in flotiq](docs/create-definition-project.png)
+    
+   _Note: You can also create `Project` using [Flotiq REST API](https://flotiq.com/docs/API/)._ 
 
-## 🚀 Quick start
+1. **Configure application**
 
-If you never used Gatsby before, I highly recommend you to [set up your development environment](https://www.gatsbyjs.org/tutorial/part-zero/)!
+    The next step is to configure our application to know from where it has to fetch the data.
+       
+    You need to create a file called `.env` inside the root of the directory, with the following structure:
 
-To copy and install this starter run this command:
+    ```
+    GATSBY_FLOTIQ_BASE_URL=https://api.flotiq.com
+    FLOTIQ_API_KEY=YOUR FLOTIQ API KEY
+    ```
 
-```bash
-$ gatsby new project-portfolio https://github.com/flotiq/gatsby-starter-projects
-```
+1.  **Start developing**
 
-The main data source of this starter is a Projects Content Type in [Flotiq.com](https://flotiq.com), after you [register](https://editor.flotiq.com/register.html), you can choose `Project` when you create your first Content Type Definition (all you need to do is follow the tutorial on Flotiq Dashboard).
+    Navigate into your new site’s directory and start it up.
 
-Next - add some projects in Flotiq! Hint: you can use the integrated Unsplash media library to pull some awesome pictures.
-
-The last step is to configure the application to know from where it has to fetch the data, this is going to be made by using `environment variables`. You need to create a file called `.env` inside the root directory of the project, with the following structure:
-
-```js
-GATSBY_FLOTIQ_BASE_URL=https://api.flotiq.com
-FLOTIQ_API_KEY=YOUR API KEY
-```
-
-To get YOUR API KEY check out [documentation](https://flotiq.com/docs/API/).
-
-After this you can start development:
-```
-gatsby develop
-```
-
+    ```sh
+    cd gatsby-starter-projects/
+    npm install
+    gatsby develop
+    ```
+   
 1.  **Open the source code and start editing!**
+    
+    Your site is now running at [http://localhost:8000](http://localhost:8000)!
+    
+    _Note: You'll also see a second link: _[http://localhost:8000/___graphql](http://localhost:8000/___graphql)`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+    
+    Open a project directory in your code editor of choice and edit `src/templates/index.js`. Save your changes and the browser will update in real time!
 
-    Your site is now running at `http://localhost:8000`!
+1. **Manage your posts using Flotiq editor**
+      
+    You can now easily manage your projects using [Flotiq editor](https://editor.flotiq.com)
+    
+    ![Managing posts using Flotiq](docs/manage-projects.png)
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+## Deploy
 
-    Open the `my-blog-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+  You can deploy this project to Heroku in 3 minutes:
+
+  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/flotiq/gatsby-starter-projects)
+  
+  Or to Netlify:
+  
+  [![Deploy](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/flotiq/gatsby-starter-projects)
 
 
-## 🎓 Learning Gatsby
+## Collaborating
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/flotiq/gatsby-starter-projects)
-<!-- AUTO-GENERATED-CONTENT:END -->
+   If you wish to to talk with us about this project, feel free to hop on our [discord server](https://discord.gg/FwXcHnX).
+   
+   If you found a bug, please report it in [issues](https://github.com/flotiq/gatsby-starter-blog/issues).

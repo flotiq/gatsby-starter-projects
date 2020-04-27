@@ -3,9 +3,9 @@
   "private": true,
   "description": "A custom, image-centric theme for Gatsby",
   "version": "1.0.0",
-  "author": "Imed Adel <aadelimed@gmail.com>",
+  "author": "Flotiq Developers <hello@flotiq.com>",
   "bugs": {
-    "url": "https://github.com/ImedAdel/gatsby-london/issues"
+    "url": "https://github.com/flotiq/gatsby-starter-projects/issues"
   },
   "engines": {
     "node": "10.x"
@@ -47,7 +47,7 @@
     "prettier": "^1.17.0",
     "pretty-quick": "^1.10.0"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/flotiq/gatsby-starter-projects#readme",
   "keywords": [
     "gatsby",
     "ghost",
@@ -59,7 +59,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ImedAdel/gatsby-london.git"
+    "url": "git+https://github.com/flotiq/gatsby-starter-projects.git"
   },
   "scripts": {
     "build": "gatsby build",

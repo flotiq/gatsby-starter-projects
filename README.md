@@ -49,6 +49,17 @@ Screenshot
     npm install
     gatsby develop
     ```
+    
+    If you wish to import example projects to your account, before running  `gatsby develop`, run:
+          
+    ```sh
+    node ./example/importExample.js
+    ```
+    
+    It will add 9 images and 3 projects to your Flotiq account.
+    
+    _Note: You need to put your Read and write API key in `.env` for import to work. You don't need Project content type in your account. If you already have projects with ids `project-1`, `projects-2`, and `project-3` they will be overwritten._
+
    
 1.  **Open the source code and start editing!**
     

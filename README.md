@@ -53,7 +53,7 @@ Screenshot
     If you wish to import example projects to your account, before running  `gatsby develop`, run:
           
     ```sh
-    node ./example/importExample.js
+    node ./.flotiq/importExample.js
     ```
     
     It will add 9 images and 3 projects to your Flotiq account.

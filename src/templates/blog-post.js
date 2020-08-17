@@ -28,7 +28,7 @@ class BlogPostTemplate extends React.Component {
 
           {post.gallery && post.gallery.map((image) =>
             <div className="post-content-image">
-              <img src={`${process.env.GATSBY_FLOTIQ_BASE_URL}/image/1920x0/${image.id}.${image.extension}`} alt={post.name}/>
+              <img src={`https://api.flotiq.com/image/1920x0/${image.id}.${image.extension}`} alt={post.name}/>
             </div>
           )}
         </article>

@@ -18,7 +18,7 @@ Screenshot
 1. **Start project from template using Gatsby CLI**
     
     ```bash
-    gatsby gatsby-starter-projects https://github.com/flotiq/gatsby-starter-projects
+    gatsby new gatsby-starter-projects https://github.com/flotiq/gatsby-starter-projects
     ```
    
 1. **Setup "Project" Content Type in Flotiq**

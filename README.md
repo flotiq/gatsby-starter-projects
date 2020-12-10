@@ -68,7 +68,7 @@ Screenshot
     
     It will add 9 images and 3 projects to your Flotiq account.
     
-    _Note: You need to put your Read and write API key as the `flotiqApiKey` for import to work. You don't need Project content type in your account. If you already have projects with ids `project-1`, `projects-2`, and `project-3` they will be overwritten._
+    _Note: You need to put your Read and write API key as the `flotiqApiKey` for import to work. You don't need the `Project` content type in your account. If you already have projects with ids `project-1`, `projects-2`, and `project-3` they will be overwritten._
 
    
 1.  **Open the source code and start editing!**

@@ -15,7 +15,16 @@ Screenshot
 
 ## Quick start
 
-1. **Start project from template using Gatsby CLI**
+1. **Start the project from template using [Flotiq CLI]((https://github.com/flotiq/flotiq-cli))**
+
+    ```bash
+   npm install -g flotiq-cli
+   flotiq start [flotiqApiKey] [projectName] https://github.com/flotiq/gatsby-starter-projects
+    ```
+   * `flotiqApKey` - Read and write API key to your Flotiq account      
+   * `projectName` - project name or project path (if you wish to start or import data from the current directory - use `.`)
+
+1. **You can also start the project from template using Gatsby CLI**
     
     ```bash
     gatsby new gatsby-starter-projects https://github.com/flotiq/gatsby-starter-projects
@@ -49,15 +58,17 @@ Screenshot
     gatsby develop
     ```
     
-    If you wish to import example projects to your account, before running  `gatsby develop`, run:
+    This step is optional and is not necessary if you used flotiq-cli to start the project.
+    
+    If you wish to import example projects to your account, before running `gatsby develop`, install [flotiq-cli](https://github.com/flotiq/flotiq-cli), and run in project directory:
           
     ```sh
-    node ./.flotiq/importExample.js
+    flotiq import [flotiqApiKey] .
     ```
     
     It will add 9 images and 3 projects to your Flotiq account.
     
-    _Note: You need to put your Read and write API key in `.env` for import to work. You don't need Project content type in your account. If you already have projects with ids `project-1`, `projects-2`, and `project-3` they will be overwritten._
+    _Note: You need to put your Read and write API key as the `flotiqApiKey` for import to work. You don't need Project content type in your account. If you already have projects with ids `project-1`, `projects-2`, and `project-3` they will be overwritten._
 
    
 1.  **Open the source code and start editing!**
@@ -87,6 +98,6 @@ Screenshot
 
 ## Collaborating
 
-   If you wish to to talk with us about this project, feel free to hop on our [discord server](https://discord.gg/FwXcHnX).
+   If you wish to to talk with us about this project, feel free to hop on our [![Discord Chat](https://img.shields.io/discord/682699728454025410.svg)](https://discord.gg/FwXcHnX).
    
    If you found a bug, please report it in [issues](https://github.com/flotiq/gatsby-starter-blog/issues).

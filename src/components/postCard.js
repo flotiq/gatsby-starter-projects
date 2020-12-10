@@ -3,9 +3,9 @@ import { Link } from "gatsby"
 
 export default props => (
   <article
-    className={`post-card ${props.count % 3 === 0 && `post-card-large`} ${props.node.gallery[0] ? `with-image` : `no-image`}`}
+    className={`post-card ${props.count % 3 === 0 && `post-card-large`} ${props.node.gallery && props.node.gallery[0] ? `with-image` : `no-image`}`}
     style={
-      props.node.gallery[0] && {
+      props.node.gallery && props.node.gallery[0] && {
         backgroundImage: 'url(https://api.flotiq.com/image/1920x0/' + props.node.gallery[0].id + '.' + props.node.gallery[0].extension
         }
       }

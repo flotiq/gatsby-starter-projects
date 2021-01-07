@@ -2,15 +2,15 @@ import React from "react"
 import { Link } from "gatsby"
 
 const Layout = props => {
-  const { title, children } = props;
-  const [toggleNav, setToggleNav] = React.useState(false);
+  const { title, children } = props
+  const [toggleNav, setToggleNav] = React.useState(false)
   return (
     <div className={`site-wrapper ${toggleNav ? `site-head-open` : ``}`}>
       <header className="site-head">
         <div className="site-head-container">
           <a
             className="nav-burger"
-            href={`#`}
+            href='#top'
             onClick={() => setToggleNav(!toggleNav)}
           >
             <div
@@ -25,16 +25,26 @@ const Layout = props => {
             </div>
           </a>
           <nav id="swup" class="site-head-left">
-            <ul className="nav" role="menu">
-              <li className="nav-home nav-current" role="menuitem">
-                <Link to={`/`}>Home</Link>
-              </li>
-              <li className="nav-about" role="menuitem">
-                <Link to={`/about`}>About</Link>
-              </li>
-              <li className="nav-elements" role="menuitem">
-                <Link to={`/elements`}>Elements</Link>
-              </li>
+            <ul>
+              <div
+                className="nav" role="menu"
+              >
+                <li>
+                  <div className="nav-home nav-current" role="menuitem">
+                    <Link to={`/`}>Home</Link>
+                  </div>
+                </li>
+                <li>
+                  <div className="nav-about" role="menuitem">
+                    <Link to={`/about`}>About</Link>
+                  </div>
+                </li>
+                <li>
+                  <div className="nav-elements" role="menuitem">
+                    <Link to={`/elements`}>Elements</Link>
+                  </div>
+                </li>
+              </div>
             </ul>
           </nav>
           <div className="site-head-center">
@@ -81,15 +91,15 @@ const Layout = props => {
         </a>
         {" & "}
         <a
-            href="https://flotiq.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          href="https://flotiq.com"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Flotiq
         </a>
       </footer>
     </div>
   )
-};
+}
 
 export default Layout

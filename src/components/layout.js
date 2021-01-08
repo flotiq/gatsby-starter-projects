@@ -1,16 +1,38 @@
-import React from "react"
+import React, {  useState } from "react"
 import { Link } from "gatsby"
+import clsx from "clsx"
+import { useLocation } from "@reach/router"
+
+const navList = [
+  {
+    slug: "/",
+    name: "Home",
+    cssClass: "nav-home",
+  },
+  {
+    slug: "/elements",
+    name: "Elements",
+    cssClass: "nav-elements",
+  },
+  {
+    slug: "/about",
+    name: "About",
+    cssClass: "nav-about",
+  },
+]
 
 const Layout = props => {
-  const { title, children } = props;
-  const [toggleNav, setToggleNav] = React.useState(false);
+  const { title, children } = props
+  const [toggleNav, setToggleNav] = useState(false)
+  const current = useLocation().pathname;
+
   return (
     <div className={`site-wrapper ${toggleNav ? `site-head-open` : ``}`}>
       <header className="site-head">
         <div className="site-head-container">
           <a
             className="nav-burger"
-            href={`#`}
+            href='#top'
             onClick={() => setToggleNav(!toggleNav)}
           >
             <div
@@ -24,17 +46,18 @@ const Layout = props => {
               </div>
             </div>
           </a>
-          <nav id="swup" class="site-head-left">
-            <ul className="nav" role="menu">
-              <li className="nav-home nav-current" role="menuitem">
-                <Link to={`/`}>Home</Link>
-              </li>
-              <li className="nav-about" role="menuitem">
-                <Link to={`/about`}>About</Link>
-              </li>
-              <li className="nav-elements" role="menuitem">
-                <Link to={`/elements`}>Elements</Link>
-              </li>
+          <nav id="swup" className="site-head-left">
+            <ul>
+              <div
+                className="nav" role="menu"
+              >
+                {
+                  navList.map((item) =>
+                    <div key={item.name} className={clsx(item.cssClass, current === item.slug && "nav-current")}>
+                      <Link to={item.slug}>{item.name}</Link>
+                    </div>)
+                }
+              </div>
             </ul>
           </nav>
           <div className="site-head-center">
@@ -81,15 +104,15 @@ const Layout = props => {
         </a>
         {" & "}
         <a
-            href="https://flotiq.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          href="https://flotiq.com"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Flotiq
         </a>
       </footer>
     </div>
   )
-};
+}
 
 export default Layout
